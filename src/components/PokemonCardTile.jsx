@@ -1,5 +1,5 @@
 import { ShoppingCart, Check } from "lucide-react";
-
+import { memo } from "react";
 import { getCardImageSrc } from "../utils/cardImages";
 
 import {
@@ -9,7 +9,7 @@ import {
   DEFAULT_RARITY_BADGE_STYLE,
 } from "../utils/pokemonTypeStyles";
 
-import cartReducer from "../context/AppContext";
+// import cartReducer from "../context/AppContext";
 
 import "./PokemonCardTile.css";
 import { useReducer } from "react";
@@ -46,7 +46,7 @@ export function PokemonCardSkeleton() {
   );
 }
 
-export default function PokemonCardTile({
+export default memo(function PokemonCardTile({
   loading,
   card,
   inCart,
@@ -80,6 +80,7 @@ export default function PokemonCardTile({
             alt={card.name}
             className="card-image w-full h-full object-contain"
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-[#d0cec8]">
@@ -160,8 +161,9 @@ export default function PokemonCardTile({
               type="button"
               className="pokemon-card-action--in-cart w-full py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-colors"
               // Instead of onAddToCart, used useReducer for cart
-              // Before: onClick={() => onAddToCart(card)}
-              onClick={() => useReducer(cartReducer, card)}
+              // Before:
+              onClick={() => onAddToCart(card)}
+              // onClick={() => useReducer(cartReducer, card)}
             >
               <Check size={12} />
               In Cart
@@ -170,7 +172,7 @@ export default function PokemonCardTile({
             <button
               type="button"
               className="pokemon-card-action--add w-full py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition-all hover:opacity-90 active:scale-[0.98]"
-              onClick={() => useReducer(cartReducer, card)}
+              onClick={() => onAddToCart(card)}
             >
               <ShoppingCart size={12} />
               Add to Cart
@@ -180,4 +182,4 @@ export default function PokemonCardTile({
       </div>
     </div>
   );
-}
+});

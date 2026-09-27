@@ -6,7 +6,9 @@ import { useApp } from "../context/AppContext";
 
 import "./Navbar.css";
 
-export default function Navbar() {
+import { memo } from "react";
+
+export default memo(function Navbar() {
   const { user, logout, cart } = useApp();
 
   const navigate = useNavigate();
@@ -130,4 +132,4 @@ export default function Navbar() {
       </div>
     </header>
   );
-}
+});

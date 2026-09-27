@@ -2,11 +2,13 @@ import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom
 
 import { AppProvider, useApp } from "./context/AppContext";
 
-import Catalogue from "./pages/Catalogue";
-import Cart from "./pages/Cart";
-import Login from "./pages/Login";
-import Collection from "./pages/Collection";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+
+const Catalogue = lazy(() => import("./pages/Catalogue"));
+const Collection = lazy(() => import("./pages/Collection"));
+const Cart = lazy(() => import("./pages/Cart"));
+const Login = lazy(() => import("./pages/Login"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function ProtectedRoute() {
   const { user } = useApp();
@@ -57,7 +59,9 @@ export default function App() {
   return (
     <AppProvider>
       <BrowserRouter>
-        <AppRoutes />
+        <Suspense fallback={<div>Loading...</div>}>
+          <AppRoutes />
+        </Suspense>
       </BrowserRouter>
     </AppProvider>
   );

@@ -1,5 +1,5 @@
 import { X, ChevronDown, ChevronUp, Search } from "lucide-react";
-import { useState } from "react";
+import { useState, memo } from "react";
 import { TYPE_SWATCH_COLORS } from "../utils/pokemonTypeStyles";
 import "./FilterSidebar.css";
 
@@ -114,7 +114,7 @@ function MultiSelectPanel({ options, selected, onChange }) {
   );
 }
 
-export default function FilterSidebar({
+export default memo(function FilterSidebar({
   search,
   onSearchChange,
   limit,
@@ -260,4 +260,4 @@ export default function FilterSidebar({
       )}
     </div>
   );
-}
+});

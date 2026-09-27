@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import "./AddMyCardForm.css";
 
 
@@ -10,7 +10,7 @@ const INITIAL_FORM = {
   note: "",
 };
 
-export default function AddMyCardForm({ onAddCard }) {
+export default memo(function AddMyCardForm({ onAddCard }) {
   const [formData, setFormData] = useState(INITIAL_FORM);
 
   const handleChange = (event) => {
@@ -122,4 +122,4 @@ export default function AddMyCardForm({ onAddCard }) {
       </form>
     </div>
   );
-}
+});
