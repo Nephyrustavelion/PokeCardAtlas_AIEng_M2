@@ -46,18 +46,6 @@ https://pokecardatlas.netlify.app/login
 
 ## Team Contribution
 
-### Andrew
-
-- Implemented custom card CRUD
-- Built My Collection page and route
-- Added editable personal notes
-- Added localStorage persistence
-- Added image support for custom cards
-- Integrated collection cards with cart
-- Worked on routing and deployment troubleshooting
-- Fixed TCGdex environment configuration issues
-- Handled incomplete API card records
-
 ### Nelton
 
 - TCGdex API integration
@@ -74,7 +62,20 @@ https://pokecardatlas.netlify.app/login
 - Netlify deployment
 - UI and styling improvements
 
-## Installation
+### Andrew
+
+- Implemented custom card CRUD
+- Built My Collection page and route
+- Added editable personal notes
+- Added localStorage persistence
+- Added image support for custom cards
+- Integrated collection cards with cart
+- Worked on routing and deployment troubleshooting
+- Fixed TCGdex environment configuration issues
+- Handled incomplete API card records
+
+
+  ## Installation
 
 Clone the repository:
 
