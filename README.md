@@ -1,6 +1,21 @@
 # Poké Card Atlas
 
-Poké Card Atlas is a React single-page application for browsing Pokémon cards, creating personal card entries, managing a personal collection, and reviewing selected cards in a cart.
+PokéCardAtlas is a Pokémon trading-card catalogue and collection web application built with React. It allows users to explore and filter Pokémon cards, add custom cards to their personal collection, manage collected cards, add cards to a cart, and complete a simulated checkout flow. The interface is designed around a clean, responsive card-based experience, with the screenshots below showing the main user journey from login to collection management and checkout.
+
+<p align="center">
+  <img src="ScreenshotsPrototype/PokeCardAtlas%20-01%20-Login.png" alt="PokéCardAtlas Login" width="49%">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-02-AddCardCatalog.png" alt="PokéCardAtlas Add Card and Catalogue" width="49%">
+</p>
+
+<p align="center">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-03-MyCatalog.png" alt="PokéCardAtlas Catalogue" width="49%">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-04-MyCollection.png" alt="PokéCardAtlas My Collection" width="49%">
+</p>
+
+<p align="center">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-05-MyCaft.png" alt="PokéCardAtlas My Cart" width="49%">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-06-Checkout.png" alt="PokéCardAtlas Checkout" width="49%">
+</p>
 
 ## Who It Is For
 
