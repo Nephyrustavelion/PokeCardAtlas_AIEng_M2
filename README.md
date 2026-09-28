@@ -3,7 +3,7 @@
 PokéCardAtlas is a Pokémon trading-card catalogue and collection web application built with React. It allows users to explore and filter Pokémon cards, add custom cards to their personal collection, manage collected cards, add cards to a cart, and complete a simulated checkout flow. The interface is designed around a clean, responsive card-based experience, with the screenshots below showing the main user journey from login to collection management and checkout.
 
 <p align="center">
-  <img src="ScreenshotsPrototype/PokeCardAtlas%20-01%20-Login.png" alt="PokéCardAtlas Login" width="49%">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-01-Login.png" alt="PokéCardAtlas Login" width="49%">
   <img src="ScreenshotsPrototype/PokeCardAtlas-02-AddCardCatalog.png" alt="PokéCardAtlas Add Card and Catalogue" width="49%">
 </p>
 
@@ -13,7 +13,7 @@ PokéCardAtlas is a Pokémon trading-card catalogue and collection web applicati
 </p>
 
 <p align="center">
-  <img src="ScreenshotsPrototype/PokeCardAtlas-05-MyCaft.png" alt="PokéCardAtlas My Cart" width="49%">
+  <img src="ScreenshotsPrototype/PokeCardAtlas-05-MyCart.png" alt="PokéCardAtlas My Cart" width="49%">
   <img src="ScreenshotsPrototype/PokeCardAtlas-06-Checkout.png" alt="PokéCardAtlas Checkout" width="49%">
 </p>
 
@@ -90,9 +90,29 @@ https://pokecardatlas.netlify.app/login
 - Handled incomplete API card records
 
 
-  ## Installation
+### Bonus Challenges Completed
 
-Clone the repository:
+- **Search and Filtering** – Added search and filtering functionality to help users find items in the catalogue.
+- **Loading States** – Added loading indicators while asynchronous API data is being retrieved.
+- **Responsive Design** – Optimised the interface for both desktop and mobile screen widths.
+- **Mock Authentication Flow** – Implemented a login flow with protected routes to restrict access to authenticated users.
+- **State Management** – Applied React state management and conditional rendering to support the additional functionality.
+- **Improved User Experience** – Enhanced navigation and interaction across the application.
+
+### AI and Tools Disclosure
+- Figma AI — Used for UI/UX design, visual prototyping, and planning the application's interface.
+- ChatGPT — Used for brainstorming, technical explanations, debugging, code review, and exploring implementation approaches.
+- GitHub Copilot — Used for in-editor VScode suggestions, code completion, and development assistance.
+
+## Installation
+
+### Clone the repository:
 
 ```bash
 git clone https://github.com/Nephyrustavelion/PokeCardAtlas_AIEng_M2.git
+
+npm install
+npm run build
+npm run dev
+
+
